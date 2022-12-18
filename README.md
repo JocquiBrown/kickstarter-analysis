@@ -11,7 +11,7 @@ Performing Analysis on Kickstarter Data to Uncover Trends for Louise's Play
 * From analyzing failed vs successful campaigns we can see that failed campaigns have goals that are about twice as high as their successful counterparts. 
 * However, there is significantly more spread amongst the failed campaigns due to outliers with exorbitant goals. These outliers skewed our mean values and resulted in a higher standard deviation than the mean, indicating that all the campaign goals below our mean values are much closer to the norm.
 * Another important thing to note is that pledge amounts were significantly higher for successful campaigns than for failed campaigns, indicating that other factors are also at play when determining the success of a campaign, besides setting overly ambitious goals. 
-For Musicals in Great Britain, the median goal was about $2000, while the median amount pledged (raised) was less than $400! In fact, 75% of the Musicals in Great Britain received less than $1500 in funding.
+* For Musicals in Great Britain, the median goal was about $2000, while the median amount pledged (raised) was less than $400! In fact, 75% of the Musicals in Great Britain received less than $1500 in funding.
 ![Box Plot for Funding Musicals in GB](https://user-images.githubusercontent.com/120291854/208279004-bbce0b34-bb19-4ccd-b28f-00953af7e44e.png)
 ## Recommendations
 * It is recommmeded that Louise starts her Kickstarter campaign for her play in May as most successful campaigns occur during this time. She should avoid launching her campaign during the holiday season, as crowdfunding is lackluster during this time
