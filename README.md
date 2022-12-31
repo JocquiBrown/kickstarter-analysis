@@ -1,19 +1,51 @@
-# kickstarter-analysis
-Performing Analysis on Kickstarter Data to Uncover Trends for Louise's Play
-## Research Findings
-* Theater is one of the most successful Categories of Crowdfunding Campaigns with over 50% of all campagins acheiving their goal
-![Parent Category Outcomes Graph](https://user-images.githubusercontent.com/120291854/208279424-e8af4e89-c8cd-45ab-b9cf-16f1bc2f7bd5.png)
-* This trend also holds true for Plays in the US secifically, with over 50% of them acheiving their crowdfunding goal
-![Play Kickstarter Campaign Outcomes](https://user-images.githubusercontent.com/120291854/208280468-997636dc-0847-4d58-b38b-1c3a84464be1.png)
-* Campaigns that launched in the April-June window had a signficantly higher success rate, while campaigns that launched in December were much more likely to come up short of their goal
-![Launch Date Outcomes](https://user-images.githubusercontent.com/120291854/208278982-cdd42f68-7668-4401-8383-9347f91d1395.png)
-* The Median goal for successful US Plays on Kickstarter is only $3000 and the Upper Quartile is only $5000. This means that over 75% of successful plays have a crowdfunding goal less than half of what Louise is asking for. 
-* From analyzing failed vs successful campaigns we can see that failed campaigns have goals that are about twice as high as their successful counterparts. 
-* However, there is significantly more spread amongst the failed campaigns due to outliers with exorbitant goals. These outliers skewed our mean values and resulted in a higher standard deviation than the mean, indicating that all the campaign goals below our mean values are much closer to the norm.
-* Another important thing to note is that pledge amounts were significantly higher for successful campaigns than for failed campaigns, indicating that other factors are also at play when determining the success of a campaign, besides setting overly ambitious goals. 
-* For Musicals in Great Britain, the median goal was about $2000, while the median amount pledged (raised) was less than $400! In fact, 75% of the Musicals in Great Britain received less than $1500 in funding.
-![Box Plot for Funding Musicals in GB](https://user-images.githubusercontent.com/120291854/208279004-bbce0b34-bb19-4ccd-b28f-00953af7e44e.png)
-## Recommendations
-* It is recommmeded that Louise starts her Kickstarter campaign for her play in May as most successful campaigns occur during this time. She should avoid launching her campaign during the holiday season, as crowdfunding is lackluster during this time
-* Louise should also seriously consider lowering her budget for the play, or at least plan on setting a much more modest goal and making up the difference another way. Louise's budget is higher than that of most failed Play Kickstarters in the US, let alone successful Play campaigns. A goal of about $5000 is much more likely to result in a successful campaign. 
-* For her future musical in Great Britain Louise should be even more modest. 75% of all Musicals received less than $1500 in crowdfunding. Loiuse should probably set her goal for less than this amount.
+# Kickstarting with Excel
+
+## Overview of Project
+
+This project will seek to observe two analyses: Campaign outcomes based on fundraising goals, as well as outcomes based on the Kickstarter launch dates. We will specifically be observing theater campaign launch dates and fundraising goals for plays.
+
+### Purpose
+
+By observing the relationships of launch dates and fundraising goals on a campaign's success, we will be able to determine the most optimal times to launch a theater campaign and the ideal fundraising goals to set for plays.
+
+## Analysis and Challenges
+
+### Method, Challenges and Analysis and for Outcomes Based on Launch Date
+
+#### Method and Challenges Faced
+
+In order to find the relationship between a campaign's launch date and the success of a campaign, we created a pivot table that displayed the number of successful, failed, and canceled theater campaigns for every month of the year. One small challenge we faced was trying to group the launch date information by month rather than the year so that we can specifically look at the time of the year where Kickstarter's have the highest rates of success. The data used for this was the "Date Created Conversion" column in our dataset, which provides the full start date for each Kickstarter. Once we had the years in our pivot table we had to group the row labels to show the month of the year, which was achieved by right-clicking one of our values and selecting the "group" option. Once "group" was selected we were able to choose "months" from a list of options to group our values by. Once we had our months and campaign outcomes in the pivot table with our year and campaign category filter, we were able to specifically analyze theater campaigns in whatever year we wanted and even create a line graph to make it easier to look at potential trends.
+
+#### Analysis of Outcomes Based on Launch Date
+
+In the graph below we can see three lines, each representing the number of successful, failed, and canceled theater Kickstarter campagins for every month of the year. The data was pulled for all years from 2009 to 2017. 
+
+Based on our chart, we can see that May, June, and July not only had the highest number of successful campaigns, but also had rleatively low numbers of failed campaigns, resulting in a high success rate for theater Kickstarters during this time of the year, as indicated by the large difference between the two values for each of these months. 
+
+According to our data, October has the highest number of failed campaigns, while December has the lowest success rate for theater Kickstarters, with a nearly equal number of failed and successful campaigns. 
+
+![Alt text](../Pictures/UND%20DAB%20Resources/Theater_Outcomes_vs_Launch.png)
+
+### Method, Challenges and Analysis of Outcomes Based on Fundraising Goals
+
+#### Method and Challenges Faced
+To analyze the relationship between a campaign's fundraising goals and its success, we created a table that looked at the percentage of play Kickstarters that were successful, failed, and canceled for various fundraising goal ranges. For our table we had to use the COUNTIF function so that Excel would know to count the number of play campaigns for each outcome. For the COUNTIF function we just entered in all of our criteria (plays, campaign outcomes and our desired goal range) and made sure we referenced the columns specifically on the "Kickstarter" sheet. One challenge we had here was making sure we locked our cell rows and columns properly so that we could click and drag formulas without having to retype everything for every value. When formatting the formula we didn't have to include dollar sign to lock the tables, but if they weren't included the table would shift the columns over from the Kickstarter sheet whenver we shifted our columns on the Outcomes Based on Goals sheet. To prevent this the user has to rememeber to put a dollar sign next to the column letters in the formulas. Once we had all of our counts for each campaign outcome we just found the sum of all outcomes for each goal range and then found the percentage for each outcome. After obtaining all of our desired values we were able to create a line grpah to look at potential trends. 
+
+### Analysis of Outcomes Based on Fundraising Goals
+
+In this graph we can see the relationship between a Kickstarter's fundraising goal and its success rate. This data was collected specifically for plays on Kickstarter from 2009 to 2017. 
+
+Finding the relationship between a play's fundraising goal and its campaign success may be difficult to see at first, but if we specifically observe the campaigns with goals under $30,000 we can see an inverse relationship between campaign success and fundraising goal amount. Conversely, we observe a direct relationship between fundraising goal dollar amount and the percentage of failed campaigns. This indicates that more modest campaign goals are much easier to achieve. It is also important to note that there were no canceled play Kickstarters in our data.
+
+![Alt text](../Pictures/UND%20DAB%20Resources/Outcomes_vs_Goals.png)
+
+## Limitations of our Dataset
+
+While the data we analyzed provided us with some useful insights, it's not without its limitations. For strters, the data we gathered starts in 2009 and runs through 2017. These  just so happen to be the first years of Kickstarter's operation and it's quite possible that data gathered more recently could look a little different from the data we've gathered now that more people are familiar with the platform. Another limitation is that other factors that may have influenced a campaign's success were not included in our dataset. These include things like pledge tiers , stretch goals, and add-ons. For example, it would be difficult to quantify the effect a campaign's stretch goals may have had on the campaign, but these no doubt have an affect on its success. We could however, look at the relationship between the average amount pledged for a Kickstarter and the Pledge tiers available.
+
+## Other Questions we could Explore
+
+Other important relationships that someone interested in Kickstarter campaign data may wnat to look at include the following: 
+    * The relationship between the length of a campaign and its success.
+    * How the country in which the campaign takes place affects its success.
+    * The relationship between the number of backers and the total amount pledged based on campaign  categories and subcategories 
