@@ -12,11 +12,11 @@
 
 ### Method, Challenges and Analysis and for Outcomes Based on Launch Date
 
-#### Method and Challenges Faced
+#### **Method and Challenges Faced**
 
    In order to find the relationship between a campaign's launch date and the success of a campaign, we created a pivot table that displayed the number of successful, failed, and canceled theater campaigns for every month of the year. One small challenge we faced was trying to group the launch date information by month rather than the year so that we can specifically look at the time of the year where Kickstarter's have the highest rates of success. The data used for this was the "Date Created Conversion" column in our dataset, which provides the full start date for each Kickstarter. Once we had the years in our pivot table we had to group the row labels to show the month of the year, which was achieved by right-clicking one of our values and selecting the "group" option. Once "group" was selected we were able to choose "months" from a list of options to group our values by. Once we had our months and campaign outcomes in the pivot table with our year and campaign category filter, we were able to specifically analyze theater campaigns in whatever year we wanted and even create a line graph to make it easier to look at potential trends.
 
-#### Analysis of Outcomes Based on Launch Date
+#### **Analysis of Outcomes Based on Launch Date**
 
    In the graph below we can see three lines, each representing the number of successful, failed, and canceled theater Kickstarter campagins for every month of the year. The data was pulled for all years from 2009 to 2017. 
 
@@ -28,11 +28,11 @@
 
 ### Method, Challenges and Analysis of Outcomes Based on Fundraising Goals
 
-#### Method and Challenges Faced
+#### **Method and Challenges Faced**
 
    To analyze the relationship between a campaign's fundraising goals and its success, we created a table that looked at the percentage of play Kickstarters that were successful, failed, and canceled for various fundraising goal ranges. For our table we had to use the COUNTIF function so that Excel would know to count the number of play campaigns for each outcome. For the COUNTIF function we just entered in all of our criteria (plays, campaign outcomes and our desired goal range) and made sure we referenced the columns specifically on the "Kickstarter" sheet. One challenge we had here was making sure we locked our cell rows and columns properly so that we could click and drag formulas without having to retype everything for every value. When formatting the formula we didn't have to include dollar sign to lock the tables, but if they weren't included the table would shift the columns over from the Kickstarter sheet whenver we shifted our columns on the Outcomes Based on Goals sheet. To prevent this the user has to rememeber to put a dollar sign next to the column letters in the formulas. Once we had all of our counts for each campaign outcome we just found the sum of all outcomes for each goal range and then found the percentage for each outcome. After obtaining all of our desired values we were able to create a line grpah to look at potential trends. 
 
-### Analysis of Outcomes Based on Fundraising Goals
+#### **Analysis of Outcomes Based on Fundraising Goals**
 
    In this graph we can see the relationship between a Kickstarter's fundraising goal and its success rate. This data was collected specifically for plays on Kickstarter from 2009 to 2017. 
 
